@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Profile"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/editprofile" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp"
+        >
+
+        <!-- Form 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/newNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edittext_border"
+                android:layout_marginVertical="5dp"
+                android:hint="Someone"
+                android:text="@={viewModel.username}" />
+        </LinearLayout>
+
+        <!-- Form 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/newEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edittext_border"
+                android:layout_marginVertical="5dp"
+                android:hint="someone@gmail.com"
+                android:text="@={viewModel.email}" />
+        </LinearLayout>
+
+        <!-- Form 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Phone" />
+
+            <EditText
+                android:id="@+id/newPhoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edittext_border"
+                android:layout_marginVertical="5dp"
+                android:hint="+62 000 1111 2222"
+                android:text="@={viewModel.phone}" />
+        </LinearLayout>
+
+        <!-- Form 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="No. Rekening" />
+
+            <EditText
+                android:id="@+id/newAccountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edittext_border"
+                android:layout_marginVertical="5dp"
+                android:hint="0000 xxxx"
+                android:text="@={viewModel.pass}" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:background="@color/rakamin"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Edit Profile"
+            />
+<!--        android:onClick="@{()->viewModel.submit()}"-->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:background="@color/mint"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Logout"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
